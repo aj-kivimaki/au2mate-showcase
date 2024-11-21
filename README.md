@@ -78,6 +78,8 @@ The backend handles user authentication and task management, while user data is 
 
 [LinkedIn](https://www.linkedin.com/in/aj-kivimaki) Atte Kivimäki - _backend development_
 
+I developed the backend for the project, creating RESTful API for the frontend, integrating third-party APIs (PayPal, Google OAuth), and designing an efficient database schema. I optimized performance with caching and configured AWS for authentication, data storage, deployment, and distribution. 
+
 ## Contact
 
 Feel free to [reach out](https://www.linkedin.com/in/aj-kivimaki) for any questions

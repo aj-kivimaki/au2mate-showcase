@@ -10,8 +10,6 @@ This project is designed to connect sellers and buyers of cars, motorbikes, boat
 
 [Live Demo](https://au2mate.au)
 
-_it might take up to_ **a minute** _of delay for the service to become fully operational due to server startup on the Render free tier_
-
 ## Key Features
 
 ### Browse publications of vehicles (car, motorbike, boat, rv) for sell
@@ -63,7 +61,7 @@ Filter them by several criteria
 - **Authentication**: AWS Cognito - JSON Web Tokens (JWT)
 - **Deployment**:
   - frontend: GitHub Actions, S3, CloudFront
-  - backend: GitHub Actions, Docker, Render
+  - backend: GitHub Actions, Docker, Lightsail, CloudFront
 
 ## Project Architecture
 

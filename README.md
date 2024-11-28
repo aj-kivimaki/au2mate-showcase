@@ -132,7 +132,7 @@ The user interface was developed following **Figma** designs provided by our tea
 
 ## 👥 Team
 
-[LinkedIn](https://www.linkedin.com/in/daniel-agray-rodriguez) **Daniel Agray Rodriquez** | UI & UX Design
+[LinkedIn](https://www.linkedin.com/in/daniel-agray-rodriguez) **Daniel Agray Rodriguez** | UI & UX Design
 
 [LinkedIn](https://www.linkedin.com/in/mychel-garzon-trujillo) **Mychel Garzon Trujillo** | Project Management and Frontend Development
 

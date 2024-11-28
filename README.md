@@ -10,24 +10,24 @@ A **platform** designed to connect **buyers and sellers** of used vehicles in Ta
 
 ## 🛠️ Technologies and Tools
 
-| **Backend**  |                              |
-| ------------ | ---------------------------- |
-| Node.js      | Web server and backend logic |
-| Express.js   | REST API framework           |
-| TypeScript   | Strongly typed JavaScript    |
-| Redis        | Caching                      |
-| Swagger      | API documentation            |
-| AWS Services | Hosting and infrastructure   |
-| Prisma ORM   | Schema and interaction tool  |
+| **Backend**  |
+| ------------ |
+| Node.js      |
+| Express.js   |
+| TypeScript   |
+| Redis        |
+| Swagger      |
+| AWS Services |
+| Prisma ORM   |
 
 <br>
 
-| **Frontend** |                             |
-| ------------ | --------------------------- |
-| React        | Component-based UI          |
-| TypeScript   | Strongly typed JavaScript   |
-| Redux        | Predictable state container |
-| Material-UI  | Customizable components     |
+| **Frontend** |
+| ------------ |
+| React        |
+| TypeScript   |
+| Redux        |
+| Material-UI  |
 
 <br>
 
@@ -99,11 +99,11 @@ A **platform** designed to connect **buyers and sellers** of used vehicles in Ta
 
 <br>
 
-|  **Frontend**  |      **Backend**       |
-| :------------: | :--------------------: |
-| GitHub Actions |     GitHub Actions     |
-|       S3       | AWS Lightsail (Docker) |
-|   CloudFront   |       CloudFront       |
+| **Frontend**   | **Backend**            |
+| -------------- | ---------------------- |
+| GitHub Actions | GitHub Actions         |
+| S3             | AWS Lightsail (Docker) |
+| CloudFront     | CloudFront             |
 
 <br>
 

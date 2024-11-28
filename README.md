@@ -1,85 +1,151 @@
-# AU2MATE.AU - showcase
+<img src="./logo.svg" alt="Au2mate Logo" width="400" height="400" style="margin-bottom: 50px;">
 
-![alt text](home.png)
+# AU2MATE
 
-## Overview
+A **platform** designed to connect **buyers and sellers** of used vehicles in Tasmania.
 
-This project is designed to connect sellers and buyers of cars, motorbikes, boats, and RVs in Tasmania, Australia.
+🔗 **Visit:** [au2mate.au](https://au2mate.au/)
 
-## Live Demo
+<br>
 
-[Live Demo](https://au2mate.au)
+## 🛠️ Technologies and Tools
 
-## Key Features
+| **Backend**  |                              |
+| ------------ | ---------------------------- |
+| Node.js      | Web server and backend logic |
+| Express.js   | REST API framework           |
+| TypeScript   | Strongly typed JavaScript    |
+| Redis        | Caching                      |
+| Swagger      | API documentation            |
+| AWS Services | Hosting and infrastructure   |
+| Prisma ORM   | Schema and interaction tool  |
 
-### Browse publications of vehicles (car, motorbike, boat, rv) for sell
+<br>
 
-Filter them by several criteria
+| **Frontend** |                             |
+| ------------ | --------------------------- |
+| React        | Component-based UI          |
+| TypeScript   | Strongly typed JavaScript   |
+| Redux        | Predictable state container |
+| Material-UI  | Customizable components     |
 
-![alt text](filters.png)
+<br>
 
-### Account
+## 🧩 Functionalities
 
-- create an account (w/ password or google)
-- confirm email with confirmation code
-- login (w/ password or google) to see seller's details
-- logout
-- request a new password (if forgotten)
-- resend confirmation code
+### 🔑 **User Authentication and Management**
 
-![alt text](login.png)
+- Registers a user in both **AWS Cognito** and the application database.
+  - Verifies email using confirmation codes and supports resending verification emails.
+  - Authenticates users and manages authentication cookies (set and clear).
+  - Allows password changes and resets using **Cognito tokens**.
+- Integrates **Google OAuth** for login and account linking/creation.
+- Deletes a user's account from both Cognito and the application database.
 
-### Profile
+### 🖼️ **Image Management**
 
-- upload company's logo and description
-- change password
-- delete the account
+- Securely uploads images to **AWS S3** with automatic resizing.
+- Generates signed URLs for protected access, distributed via **CloudFront**.
+- Manages images for vehicles and corporate logos (upload, retrieve, delete).
+- Retrieves all images or a single image with signed URLs.
 
-![alt text](profile.png)
+### 🗄️ **Database Management**
 
-- see and renew plans
+- Uses **Prisma ORM** for schema management and database interactions.
+- Utilizes **AWS RDS** MySQL for reliable and scalable database storage.
+- Fetches data from cache or queries the database when necessary.
 
-![alt text](plans.png)
+### 🚗 **Vehicle and Publication Management**
 
-- edit and remove publications
+- Retrieves vehicles (bike, boat, car, RV) enriched with signed image URLs.
+- Manages vehicle records:
+  - Creates, updates, or deletes vehicles with specific details.
+- Manages ads:
+  - Creates new ads and updates related vehicles and subscriptions.
+  - Retrieves ads with filtering, sorting, and pagination.
+  - Handles ad statuses (inactive, deleted).
+  - Calculates ad expiration dates based on subscription details.
+  - Signs vehicle images for ad-related use cases.
+- Provides counts of active ads by vehicle group.
+- Renews corporate ads based on subscription updates.
 
-![alt text](publications.png)
+### 💳 **Subscription Management**
 
-- finish unfinished publications
+- Creates and updates subscriptions with accurate expiration handling.
+- Processes payments via **PayPal** and **Braintree** for credit cards.
+  - Initiates PayPal orders and captures payments.
+  - Generates OAuth2 access tokens for PayPal integration.
 
-### Subscription
+### 📍 **Profile and Address Management**
 
-- buy a plan to create a publication to sell your own vehicle
-  - PayPal
-  - credit card
+- Updates user attributes (e.g., phone, company description, etc.).
+- Retrieves, creates, or deletes corporate user addresses.
 
-## Technologies Used
+### 🚚 **Vehicle Services (Bike, Boat, Car, RV)**
 
-- **Frontend**: React, Redux, Material-UI
-- **Backend**: Node.js, Express.js
-- **Database**: AWS RDS - Relational Database Service, Prisma/MySQL
-- **Authentication**: AWS Cognito - JSON Web Tokens (JWT)
-- **Deployment**:
-  - frontend: GitHub Actions, S3, CloudFront
-  - backend: GitHub Actions, Docker, Lightsail, CloudFront
+- Retrieves lists of vehicles by type, enriched with signed image URLs.
+- Creates new vehicle records with required details.
+- Updates or deletes specific vehicle records.
 
-## Project Architecture
+### 📊 **Additional Features**
 
-The app is structured using a monolithic approach, with the frontend communicating with the backend via RESTful APIs.
-The backend handles user authentication and task management, while user data is securely stored in an AWS RDS database.
+- Retrieves vehicle attributes (fuel types, brands, transmissions, usage types) with active vehicle counts.
+- Optimized performance using **Redis** caching.
+- Provides health check endpoints for monitoring application status (basic and verbose).
 
-## Team
+<br>
 
-[LinkedIn](https://www.linkedin.com/in/mychel-garzon-trujillo) Mychel Garzon Trujillo - _project management and frontend development_
+## 🚀 Deployment
 
-[LinkedIn](https://www.linkedin.com/in/pinja-alanne-3920a1161) Pinja Alanne - _frontend development_
+<br>
 
-[LinkedIn](https://www.linkedin.com/in/doratokai28) Dóra Tokai - _frontend development_
+|  **Frontend**  |      **Backend**       |
+| :------------: | :--------------------: |
+| GitHub Actions |     GitHub Actions     |
+|       S3       | AWS Lightsail (Docker) |
+|   CloudFront   |       CloudFront       |
 
-[LinkedIn](https://www.linkedin.com/in/aj-kivimaki) Atte Kivimäki - _backend development_
+<br>
 
-I developed the backend for the project, creating RESTful API for the frontend, integrating third-party APIs (PayPal, Google OAuth), and designing an efficient database schema. I optimized performance with caching and configured AWS for authentication, data storage, deployment, and distribution. 
+## 🙌 My Development Contributions
 
-## Contact
+### Backend Development
 
-Feel free to [reach out](https://www.linkedin.com/in/aj-kivimaki) for any questions
+- Designed and implemented REST APIs.
+- Architected the database and managed data flows.
+
+### CI/CD
+
+- Automated builds and deployments using GitHub Actions.
+
+### AWS Integration
+
+- Configured and integrated **AWS services**.
+
+<br>
+
+## 🎨 UI & UX Design and Frontend
+
+The user interface was developed following **Figma** designs provided by our team's **UI/UX Designer**.
+
+<br>
+
+## 👥 Team
+
+[LinkedIn](https://www.linkedin.com/in/daniel-agray-rodriguez) **Daniel Agray Rodriquez** | UI & UX Design
+
+[LinkedIn](https://www.linkedin.com/in/mychel-garzon-trujillo) **Mychel Garzon Trujillo** | Project Management and Frontend Development
+
+[LinkedIn](https://www.linkedin.com/in/pinja-alanne-3920a1161) **Pinja Alanne** | Frontend Development
+
+[LinkedIn](https://www.linkedin.com/in/doratokai28) **Dóra Tokai** | Frontend Development
+
+[LinkedIn](https://www.linkedin.com/in/aj-kivimaki) **Atte Kivimäki** | Backend Development
+
+<br>
+
+## 📧 Contact
+
+Feel free to reach out for any questions
+
+[LinkedIn - Atte Kivimäki](https://www.linkedin.com/in/aj-kivimaki)

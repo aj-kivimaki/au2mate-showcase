@@ -10,24 +10,15 @@ A **platform** designed to connect **buyers and sellers** of used vehicles in Ta
 
 ## 🛠️ Technologies and Tools
 
-| **Backend**  |
-| ------------ |
-| Node.js      |
-| Express.js   |
-| TypeScript   |
-| Redis        |
-| Swagger      |
-| AWS Services |
-| Prisma ORM   |
-
-<br>
-
-| **Frontend** |
-| ------------ |
-| React        |
-| TypeScript   |
-| Redux        |
-| Material-UI  |
+| **Frontend** | **Backend**  |
+| ------------ | ------------ |
+| React        | Node.js      |
+| TypeScript   | Express.js   |
+| Redux        | TypeScript   |
+| Material-UI  | Redis        |
+|              | Swagger      |
+|              | AWS Services |
+|              | Prisma ORM   |
 
 <br>
 
